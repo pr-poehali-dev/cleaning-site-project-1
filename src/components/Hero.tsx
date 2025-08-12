@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
             Профессиональная уборка
-            <span className="text-primary block">в Москве</span>
+            <span className="text-primary block">в Севастополе</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Доверьте уборку профессионалам! Гарантия качества, современное оборудование, 
