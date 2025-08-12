@@ -39,27 +39,7 @@ export const AdminProvider = ({ children }: AdminProviderProps) => {
 };
 
 const AdminToolbar = () => {
-  const { isAdminMode, toggleAdminMode } = useAdmin();
-
-  return (
-    <div className="fixed top-4 right-4 z-50">
-      <Card className="p-4 shadow-lg border-primary">
-        <CardContent className="p-0">
-          <div className="flex items-center space-x-2">
-            <Icon name="Settings" size={16} className="text-primary" />
-            <span className="text-sm font-medium">Режим редактирования</span>
-            <Switch 
-              checked={isAdminMode} 
-              onCheckedChange={toggleAdminMode}
-            />
-          </div>
-          <div className="mt-2 text-xs text-muted-foreground">
-            Кликните на элементы для редактирования
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  return null;
 };
 
 interface EditableProps {

@@ -19,24 +19,43 @@ const CalculatorAdmin = () => {
 
   const calculatePrice = () => {
     let total = 0;
+    let basePrice = 0;
     
     calculatorFields.forEach(field => {
       const value = calcValues[field.id];
+      
       if (field.type === 'number' && value) {
-        total += parseFloat(value) * field.multiplier;
+        const numValue = parseFloat(value);
+        if (field.label.toLowerCase().includes('площадь') || field.label.toLowerCase().includes('м²')) {
+          basePrice = numValue * field.multiplier;
+          total = basePrice;
+        } else {
+          total += numValue * field.multiplier;
+        }
       } else if (field.type === 'select' && value) {
-        total *= field.multiplier;
+        if (field.label.toLowerCase().includes('тип')) {
+          // Для типа услуги умножаем базовую цену
+          total = basePrice * field.multiplier;
+        } else {
+          total += field.multiplier;
+        }
       } else if (field.type === 'checkbox' && Array.isArray(value) && value.length > 0) {
         value.forEach(option => {
-          const percentage = option.match(/\\+?(\\d+)%/)?.[1];
-          if (percentage) {
-            total *= (1 + parseFloat(percentage) / 100);
+          const percentageMatch = option.match(/\+(\d+)%/);
+          const fixedMatch = option.match(/\+(\d+)₽/);
+          
+          if (percentageMatch) {
+            const percentage = parseFloat(percentageMatch[1]);
+            total *= (1 + percentage / 100);
+          } else if (fixedMatch) {
+            const amount = parseFloat(fixedMatch[1]);
+            total += amount;
           }
         });
       }
     });
     
-    setCalculatedPrice(Math.round(total));
+    setCalculatedPrice(Math.round(Math.max(total, 0)));
   };
 
   const handleAddField = () => {

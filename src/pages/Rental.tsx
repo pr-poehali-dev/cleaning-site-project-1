@@ -198,7 +198,7 @@ const RentalPage = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/4">
+          <div className="lg:w-1/5">
             <Card className="mb-6">
               <CardHeader>
                 <CardTitle>Дата аренды</CardTitle>
@@ -285,7 +285,7 @@ const RentalPage = () => {
             </Card>
           </div>
 
-          <div className="lg:w-3/4">
+          <div className="lg:w-4/5">
             <div className="mb-4 flex items-center justify-between">
               <p className="text-muted-foreground">
                 Найдено позиций: <span className="font-semibold">{filteredEquipment.length}</span>

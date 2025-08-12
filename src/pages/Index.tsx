@@ -22,8 +22,8 @@ const Index = () => {
         <Contact />
         <Footer />
         
-        {/* Корзина - фиксированная справа */}
-        <div className="fixed right-4 top-20 w-80 z-40 max-h-[80vh] overflow-y-auto">
+        {/* Корзина - компактная в правом нижнем углу */}
+        <div className="fixed right-4 bottom-20 w-72 z-40 max-h-[60vh] overflow-y-auto">
           <Cart />
         </div>
         
