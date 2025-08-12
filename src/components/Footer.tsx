@@ -8,10 +8,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Icon name="Sparkles" size={24} className="text-primary" />
-              <span className="text-xl font-bold">КлинПро</span>
+              <span className="text-xl font-bold">ХочуКлининг</span>
             </div>
             <p className="text-muted-foreground">
-              Профессиональные услуги клининга в Москве с гарантией качества.
+              Профессиональные услуги клининга в Севастополе с гарантией качества.
             </p>
           </div>
           <div>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 КлинПро. Все права защищены.</p>
+          <p>&copy; 2024 ХочуКлининг. Все права защищены.</p>
         </div>
       </div>
     </footer>

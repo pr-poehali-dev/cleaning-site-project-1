@@ -24,15 +24,15 @@ const Contact = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Icon name="Phone" size={20} className="text-primary" />
-                  <span>+7 (495) 123-45-67</span>
+                  <span>+7 (978) 290-92-92</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="Mail" size={20} className="text-primary" />
-                  <span>info@klinpro.ru</span>
+                  <span>info@xochuklinning.ru</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="MapPin" size={20} className="text-primary" />
-                  <span>г. Москва, ул. Примерная, д. 1</span>
+                  <span>г. Севастополь, ул. Правды 10/8, оф. 5</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Icon name="Clock" size={20} className="text-primary" />

@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Icon name="Sparkles" size={32} className="text-primary" />
-            <span className="text-2xl font-bold text-foreground">КлинПро</span>
+            <span className="text-2xl font-bold text-foreground">ХочуКлининг</span>
           </Link>
           <div className="hidden md:flex space-x-6">
             <Link to="/services" className="text-foreground hover:text-primary transition-colors">Услуги</Link>
@@ -19,7 +19,10 @@ const Navigation = () => {
             <Link to="/#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</Link>
             <Link to="/#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</Link>
           </div>
-          <Button>Личный кабинет</Button>
+          <div className="flex items-center space-x-2">
+            <Link to="/admin" className="text-sm text-foreground hover:text-primary transition-colors">Админ</Link>
+            <Button>Личный кабинет</Button>
+          </div>
         </div>
       </div>
     </nav>
